@@ -31,6 +31,8 @@ namespace CIS376_Project
         public frmLogin()
         {
             InitializeComponent();
+
+            txtPassword.PasswordChar = '*'; //makes the password not visible while typing
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
