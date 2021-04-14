@@ -35,11 +35,13 @@ namespace CIS376_Project
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnReg = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnReg);
             this.groupBox1.Controls.Add(this.btnLogin);
             this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.txtUsername);
@@ -94,6 +96,16 @@ namespace CIS376_Project
             this.label1.TabIndex = 0;
             this.label1.Text = "Username:";
             // 
+            // btnReg
+            // 
+            this.btnReg.Location = new System.Drawing.Point(269, 114);
+            this.btnReg.Name = "btnReg";
+            this.btnReg.Size = new System.Drawing.Size(75, 23);
+            this.btnReg.TabIndex = 5;
+            this.btnReg.Text = "Register";
+            this.btnReg.UseVisualStyleBackColor = true;
+            this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,6 +128,7 @@ namespace CIS376_Project
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnReg;
     }
 }
 

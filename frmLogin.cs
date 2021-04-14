@@ -51,5 +51,11 @@ namespace CIS376_Project
                 MessageBox.Show("Incorrect username or password entered.", "Login Error");
             }
         }
+        private void btnReg_Click(object sender, EventArgs e)
+        {
+            this.Hide(); //removes login form
+            frmReg newForm = new frmReg(); //sets up registration form
+            newForm.ShowDialog(); //shows registration form
+        }
     }
 }
