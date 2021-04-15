@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace CIS376_Project
 {
@@ -14,11 +15,29 @@ namespace CIS376_Project
     {
         public bool verifyLogin(string un, string pw) //function will verify the username and password have been typed correctly
         {
-            //can be expanded on later!!!
-            string corrUn = "username"; //correct username
-            string corrPw = "password"; //correct password
-            /////////////////////////////
-            
+            StreamReader file = new StreamReader(@"Data\user.dat"); //opens user data file
+            string line = ""; //will hold individual lines from file
+            bool unFound = false; //username was found within data file?
+
+            string corrUn = null; //correct username
+            string corrPw = null; //correct password
+
+            while ((line = file.ReadLine()) != null && unFound == false) //loops through line to find username in data file
+            {
+                string[] splitLine = line.Split(' '); //splits line into username, password, and names
+                string username = splitLine[0]; //username from line
+                string password = splitLine[1]; //password from line
+                                
+                if (un == username)
+                {
+                    unFound = true; //username is found in the data file
+                    corrUn = username; //found username is set as the correct username
+                    corrPw = password; //found password is set as the correct password
+                }
+            }
+
+            file.Close();
+
             if (un == corrUn && pw == corrPw) //checks if arguments are correct strings
             {
                 return true; //if they are

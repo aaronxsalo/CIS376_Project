@@ -30,16 +30,16 @@ namespace CIS376_Project
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtFirst = new System.Windows.Forms.TextBox();
-            this.txtLast = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtLast = new System.Windows.Forms.TextBox();
+            this.txtFirst = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,60 +62,25 @@ namespace CIS376_Project
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User Registration";
             // 
-            // txtFirst
+            // btnCancel
             // 
-            this.txtFirst.Location = new System.Drawing.Point(72, 22);
-            this.txtFirst.Name = "txtFirst";
-            this.txtFirst.Size = new System.Drawing.Size(248, 20);
-            this.txtFirst.TabIndex = 0;
+            this.btnCancel.Location = new System.Drawing.Point(245, 133);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtLast
+            // btnSubmit
             // 
-            this.txtLast.Location = new System.Drawing.Point(72, 48);
-            this.txtLast.Name = "txtLast";
-            this.txtLast.Size = new System.Drawing.Size(248, 20);
-            this.txtLast.TabIndex = 1;
-            // 
-            // txtUser
-            // 
-            this.txtUser.Location = new System.Drawing.Point(72, 74);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(248, 20);
-            this.txtUser.TabIndex = 2;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Location = new System.Drawing.Point(72, 100);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(248, 20);
-            this.txtPass.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "First Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Last Name:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Username:";
+            this.btnSubmit.Location = new System.Drawing.Point(9, 133);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 8;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // label4
             // 
@@ -126,23 +91,60 @@ namespace CIS376_Project
             this.label4.TabIndex = 7;
             this.label4.Text = "Password:";
             // 
-            // btnSubmit
+            // label3
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(9, 133);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 8;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Username:";
             // 
-            // btnCancel
+            // label2
             // 
-            this.btnCancel.Location = new System.Drawing.Point(245, 133);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 9;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Last Name:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "First Name:";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(72, 100);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(248, 20);
+            this.txtPass.TabIndex = 3;
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(72, 74);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(248, 20);
+            this.txtUser.TabIndex = 2;
+            // 
+            // txtLast
+            // 
+            this.txtLast.Location = new System.Drawing.Point(72, 48);
+            this.txtLast.Name = "txtLast";
+            this.txtLast.Size = new System.Drawing.Size(248, 20);
+            this.txtLast.TabIndex = 1;
+            // 
+            // txtFirst
+            // 
+            this.txtFirst.Location = new System.Drawing.Point(72, 22);
+            this.txtFirst.Name = "txtFirst";
+            this.txtFirst.Size = new System.Drawing.Size(248, 20);
+            this.txtFirst.TabIndex = 0;
             // 
             // frmReg
             // 
